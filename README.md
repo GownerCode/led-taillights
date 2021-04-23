@@ -1,6 +1,7 @@
 # led-taillights
 
 Use a continuous WS812 individually addressable LED strip as taillights controlled by an Arduino. Can be used on anything from cars to motorcycles, even bicycles or your mom.
+
 Current features:
 - configurable left and tight blinkers
 - hazard blinker when both blinkers are on
