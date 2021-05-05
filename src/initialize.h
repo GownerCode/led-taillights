@@ -63,3 +63,17 @@ void ftg_init(CRGB leds[], int NUM_LEDS, int brightness, int color)
         FastLED.delay(delay -= (delay / NUM_LEDS));
     }
 }
+
+void mc_fade_init(CRGB leds[], int NUM_LEDS, int brightness, int color)
+{
+    int j = color - brightness;
+    for (int i = 0; i <= brightness; i++)
+    {
+        for (int k = 0; k < NUM_LEDS; k++)
+        {
+            leds[k] = CHSV(j, 255, i);
+        }
+        j++;
+        FastLED.delay(5);
+    }
+}

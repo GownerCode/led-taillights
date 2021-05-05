@@ -92,15 +92,20 @@ void setup()
   FastLED.setBrightness(actual_master_brightness);
   fill_solid(leds, NUM_LEDS, CRGB::Black);
   
-  // Choosing a random init animation (currently there are only 2)
+  // Choosing a random init animation (currently there are 3)
   randomSeed(analogRead(A2));
-  if (random(2))
+  int r = random(3);
+
+  switch (r)
   {
+  case 0:
     ftg_init(leds, NUM_LEDS, actual_tail_brightness, BRAKE_COLOR);
-  }
-  else
-  {
+    break;
+  case 1:
     sinaloid_init(leds, NUM_LEDS, actual_tail_brightness, BRAKE_COLOR);
+    break;
+  case 2:
+    mc_fade_init(leds, NUM_LEDS, actual_tail_brightness, BRAKE_COLOR);
   }
 
   FastLED.show();
