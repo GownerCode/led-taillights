@@ -10,7 +10,7 @@ Current features:
 - white reverse light
   - depending on your particular strip, this can actually be very practical
   
-Planned features:
+Planned features (This project will not be updated in the near future):
 - engine on detection
 - Tesla-esque lightshow display mode
 - police light mode
